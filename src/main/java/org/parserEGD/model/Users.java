@@ -1,18 +1,26 @@
 package org.parserEGD.model;
 
-import java.util.List;
+import org.json.simple.JSONArray;
 
 public class Users {
     private String name;
     private String gusoev_login;
     private String type;
-    private List<Info> infoList;
+    private JSONArray roles;
+    private String email;
+    private String phone_number;
+    private String date_of_birth;
 
-    public Users(String name, String gusoev_login, String type, List<Info> infoList) {
+
+    public Users(String name, String gusoev_login, String type, JSONArray roles, String email, String phone_number, String date_of_birth) {
         this.name = name;
         this.gusoev_login = gusoev_login;
         this.type = type;
-        this.infoList = infoList;
+        this.roles = roles;
+
+        this.email = email;
+        this.phone_number = phone_number;
+        this.date_of_birth = date_of_birth;
     }
 
     public String getName() {
@@ -27,22 +35,26 @@ public class Users {
         return type;
     }
 
-    public List<Info> getInfoList() {
-        return infoList;
+    public JSONArray getRoles() {
+        return roles;
     }
 
-    public void setInfoList(List<Info> infoList) {
-        this.infoList = infoList;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone_number() {
+        return phone_number;
+    }
+
+    public String getDate_of_birth() {
+        return date_of_birth;
     }
 
     @Override
     public String toString() {
-        return "Users{" +
-                "name='" + name + '\'' +
-                ", gusoev_login='" + gusoev_login + '\'' +
-                ", type='" + type + '\'' +
-                ", infoList=" + infoList +
-                '}';
+        return name + ';' + gusoev_login + ';' + type + ';' + roles + ';' + email + ';' + phone_number + ';' + date_of_birth + "\n";
     }
 }
 

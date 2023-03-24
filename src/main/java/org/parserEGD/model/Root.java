@@ -3,22 +3,22 @@ package org.parserEGD.model;
 import java.util.List;
 
 public class Root {
-    private String name;
+    //private String name;
 
     private List<Users> staff;
 
 
-    public String getName() {
+   /* public String getName() {
         return name;
-    }
+    }*/
 
     public List<Users> getStaff() {
         return staff;
     }
 
-    public void setName(String name) {
+    /*public void setName(String name) {
         this.name = name;
-    }
+    }*/
 
     public void setStaff(List<Users> staff) {
         this.staff = staff;
